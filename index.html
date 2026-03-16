@@ -1,62 +1,448 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shiv Shakti Refractory</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f8f9fa;
-            color: #343a40;
-            text-align: center;
-        }
-        .container {
-            background-color: white;
-            padding: 3rem;
-            border-radius: 12px;
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
-            max-width: 500px;
-            width: 90%;
-        }
-        h1 {
-            color: #e67e22; /* A vibrant orange tone fitting for a refractory/industrial business */
-            margin-top: 0;
-            margin-bottom: 1rem;
-            font-size: 2rem;
-            letter-spacing: 0.5px;
-        }
-        p {
-            font-size: 1.1rem;
-            color: #6c757d;
-            margin-bottom: 0.5rem;
-        }
-        .loader {
-            border: 4px solid #f3f3f3;
-            border-top: 4px solid #e67e22;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            animation: spin 1s linear infinite;
-            margin: 2rem auto 0;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shiv Shakti Refractory – Leading Chamotte & Refractory Raw Materials Manufacturer</title>
+  <meta name="description" content="Shiv Shakti Refractory is a premier manufacturer and exporter of high-quality Chamotte and Calcined Bauxite from Bhuj, India. ISO 9001 certified refractory raw materials.">
+  <meta name="keywords" content="Chamotte manufacturer India, Calcined Bauxite supplier, refractory raw materials, fire clay grog, Chamotte exporter India, Shiv Shakti Refractory Bhuj">
+  <link rel="canonical" href="https://www.shivsr.com/">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Shiv Shakti Refractory",
+    "url": "https://www.shivsr.com/",
+    "logo": "https://www.shivsr.com/images/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-9978909962",
+      "contactType": "customer service",
+      "email": "marketing@shivsr.com",
+      "areaServed": "IN",
+      "availableLanguage": ["en", "Hindi", "Gujarati"]
+    },
+    "sameAs": [
+      "https://www.facebook.com/shivshaktirefractory",
+      "https://www.linkedin.com/company/shiv-shakti-refractory"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Shiv Shakti Refractory",
+    "image": "https://www.shivsr.com/images/infrastructure/kiln.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Hospital Road",
+      "addressLocality": "Bhuj",
+      "addressRegion": "Gujarat",
+      "postalCode": "370001",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 23.2381,
+      "longitude": 69.6669
+    },
+    "url": "https://www.shivsr.com/",
+    "telephone": "+919978909962",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    ]
+  }
+  </script>
+  <style>
+    /* HERO */
+    .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .hero-visual { display: flex; flex-direction: column; gap: 16px; }
+    .hero-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      transition: all var(--transition);
+    }
+    .hero-card:hover { border-color: var(--border-glow); background: rgba(245,158,11,0.06); }
+    .hero-card-icon {
+      width: 44px; height: 44px;
+      background: var(--gradient-amber);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem; flex-shrink: 0;
+    }
+    .hero-card-text { font-size: 0.88rem; }
+    .hero-card-text strong { display: block; color: var(--text-main); }
+    .hero-card-text span { color: var(--text-muted); }
+
+    /* PRODUCTS SECTION */
+    .product-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: all var(--transition);
+    }
+    .product-card { transition: all var(--transition); }
+    .product-card-header {
+      background: linear-gradient(135deg, rgba(245,158,11,0.15), rgba(245,158,11,0.05));
+      padding: 32px 28px 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    .product-card-header h3 { font-family: 'Rajdhani',sans-serif; font-size: 1.5rem; font-weight: 700; margin: 12px 0 8px; }
+    .product-card-body { padding: 24px 28px; }
+    .grade-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+    .grade-pill {
+      background: rgba(245,158,11,0.1);
+      border: 1px solid var(--border-glow);
+      color: var(--primary);
+      padding: 4px 12px;
+      border-radius: 50px;
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+
+    /* WHY SECTION */
+    .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .why-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      position: relative;
+      overflow: hidden;
+      transition: all var(--transition);
+    }
+    .why-item::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--gradient-amber);
+      transform: scaleX(0);
+      transition: transform var(--transition);
+    }
+    .why-item:hover::before { transform: scaleX(1); }
+    .why-item:hover { border-color: var(--primary); }
+    .why-num { font-family: 'Rajdhani',sans-serif; font-size: 3rem; font-weight: 700; color: rgba(245,158,11,0.4); line-height: 1; margin-bottom: 8px; }
+    .why-item h3 { font-size: 1rem; font-weight: 600; margin-bottom: 8px; }
+    .why-item p { color: var(--text-muted); font-size: 0.88rem; }
+
+    /* INDUSTRIES */
+    .industry-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      padding: 10px 20px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: all var(--transition);
+      cursor: default;
+    }
+    .industry-pill:hover { border-color: var(--border-glow); background: rgba(245,158,11,0.06); color: var(--primary); }
+    .industry-pills { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+
+    /* CTA BANNER */
+    .cta-banner {
+      background: linear-gradient(135deg, #1a1000 0%, #1a0a00 50%, #0f0f1a 100%);
+      border: 1px solid var(--border-glow);
+      border-radius: var(--radius-lg);
+      padding: 52px 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .why-grid { grid-template-columns: 1fr; }
+      .cta-banner { padding: 36px 24px; }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Shiv Shakti Refractory</h1>
-        <p>Our website is currently under development.</p>
-        <p>Please check back later!</p>
-        <div class="loader"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-brand"><img src="images/logo-transparent.png" alt="Shiv Shakti Refractory" class="nav-logo"></a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="products.html">Products</a>
+      <a href="chamotte-grades.html">Chamotte Grades</a>
+      <a href="applications.html">Applications</a>
+      <a href="industries.html">Industries</a>
+      <a href="quality.html">Quality</a>
+      <a href="infrastructure.html">Infrastructure</a>
+      <a href="exports.html">Exports</a>
+      <a href="downloads.html">Downloads</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html" class="btn btn-primary nav-cta">Contact Us</a>
     </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-content fade-in">
+        <div class="hero-tag"><span class="dot"></span> ISO 9001 Certified Manufacturer</div>
+        <h1>Welcome to <span class="highlight">Shiv Shakti</span> Refractory</h1>
+        <p class="hero-sub">Premium Chamotte and Refractory Raw Materials — Reliable manufacturer and exporter from Bhuj, Kachchh, India.</p>
+        <div class="hero-buttons">
+          <a href="products.html" class="btn btn-primary">Explore Products</a>
+          <a href="contact.html" class="btn btn-outline">Request a Quote</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><div class="num">3000+</div><div class="label">MT / Month Capacity</div></div>
+          <div class="hero-stat"><div class="num">15+</div><div class="label">Years Experience</div></div>
+          <div class="hero-stat"><div class="num">4+</div><div class="label">Export Markets</div></div>
+        </div>
+      </div>
+      <div class="hero-visual fade-in" style="animation-delay:0.2s">
+        <div class="hero-card">
+          <div class="hero-card-icon">🏭</div>
+          <div class="hero-card-text"><strong>Rotary Kiln Manufacturing</strong><span>61m × 2.5m – Bhuj, Kachchh</span></div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-icon">🧪</div>
+          <div class="hero-card-text"><strong>Lab Tested – Every Batch</strong><span>XRF · Chemical · ASTM C:357</span></div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-icon">🌍</div>
+          <div class="hero-card-text"><strong>Global Export</strong><span>India · UAE · Saudi Arabia · Europe</span></div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-icon">⚙️</div>
+          <div class="hero-card-text"><strong>Custom Particle Sizes</strong><span>0–1 mm, 1–3 mm, 3–5 mm, 200 Mesh & more</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="section">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-tag">Our Products</span>
+      <h2 class="section-title">High-Grade Refractory Raw Materials</h2>
+      <p class="section-subtitle">Manufactured at our facility in Bhuj with rigorous quality control, available in multiple grades and custom particle sizes.</p>
+    </div>
+    <div class="grid-3 fade-in">
+      <div class="product-card">
+        <div class="product-card-header">
+          <span class="badge">Product 01</span>
+          <h3>Chamotte (Shivmotte LF)</h3>
+          <p style="color:var(--text-muted);font-size:0.9rem;">Standard & high-alumina chamotte for refractory, ceramics and foundry industries.</p>
+        </div>
+        <div class="product-card-body">
+          <p style="color:var(--text-muted);font-size:0.88rem;margin-bottom:12px;">Available Grades:</p>
+          <div class="grade-pills">
+            <span class="grade-pill">LF 42</span>
+            <span class="grade-pill">LF 46</span>
+            <span class="grade-pill">LF 54</span>
+            <span class="grade-pill">LF 60</span>
+            <span class="grade-pill">LF 70+</span>
+          </div>
+          <a href="chamotte-grades.html" class="btn btn-outline" style="margin-top:20px;width:100%;justify-content:center;">View All Grades</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card-header">
+          <span class="badge">Product 02</span>
+          <h3>Calcined Bauxite</h3>
+          <p style="color:var(--text-muted);font-size:0.9rem;">High-alumina calcined bauxite with superior refractory performance for demanding applications.</p>
+        </div>
+        <div class="product-card-body">
+          <p style="color:var(--text-muted);font-size:0.88rem;margin-bottom:12px;">Available Grades:</p>
+          <div class="grade-pills">
+            <span class="grade-pill">CB 80</span>
+            <span class="grade-pill">CB 82</span>
+            <span class="grade-pill">CB 86</span>
+          </div>
+          <a href="products.html" class="btn btn-outline" style="margin-top:20px;width:100%;justify-content:center;">Learn More</a>
+        </div>
+      </div>
+      <div class="product-card" style="border-color:var(--border-glow);background:linear-gradient(135deg,rgba(245,158,11,0.06),var(--bg-card))">
+        <div class="product-card-header" style="background:linear-gradient(135deg,rgba(245,158,11,0.18),rgba(245,158,11,0.06))">
+          <span class="badge">Custom Sizes</span>
+          <h3>Custom Particle Sizing</h3>
+          <p style="color:var(--text-muted);font-size:0.9rem;">We deliver particle sizes as per customer requirement — precision gradation for consistent results.</p>
+        </div>
+        <div class="product-card-body">
+          <ul class="checklist">
+            <li>0–1 mm · 1–3 mm · 3–5 mm</li>
+            <li>200 Mesh powder</li>
+            <li>Custom gradation on request</li>
+            <li>Jumbo bags (1250 kg) or as needed</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary" style="margin-top:20px;width:100%;justify-content:center;">Request Sample</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- WHY CHOOSE US -->
+<section class="section">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-tag">Competitive Advantage</span>
+      <h2 class="section-title">Why Choose Shiv Shakti Refractory?</h2>
+    </div>
+    <div class="why-grid fade-in">
+      <div class="why-item"><div class="why-num">01</div><h3>Consistent Chemistry</h3><p>Batch-by-batch chemical analysis ensures uniform Al₂O₃ content and low iron for superior refractoriness.</p></div>
+      <div class="why-item"><div class="why-num">02</div><h3>Mine-to-Market Control</h3><p>Own lease mines and 10+ washing plants gives us full control over supply chain quality and cost.</p></div>
+      <div class="why-item"><div class="why-num">03</div><h3>Custom Sizing</h3><p>Precise particle size control — 0–1 mm, 1–3 mm, 3–5 mm, 200 Mesh or any size as per your spec.</p></div>
+      <div class="why-item"><div class="why-num">04</div><h3>Fast Dispatch</h3><p>3000 MT/month production capacity with own transport fleet enables quick order fulfilment.</p></div>
+      <div class="why-item"><div class="why-num">05</div><h3>Technical Support</h3><p>Dedicated technical team to assist with product selection, TDS, SDS and application guidance.</p></div>
+      <div class="why-item"><div class="why-num">06</div><h3>Export Experience</h3><p>Proven track record exporting to UAE, Saudi Arabia, and Europe with proper documentation & packing.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- INDUSTRIES SERVED -->
+<section class="section">
+  <div class="container text-center">
+    <span class="section-tag">Industries Served</span>
+    <h2 class="section-title">Powering Refractory Needs Across Industries</h2>
+    <p class="section-subtitle">Our chamotte and calcined bauxite serve critical thermal processing industries worldwide.</p>
+    <div class="industry-pills fade-in">
+      <span class="industry-pill">🏗️ Steel Industry</span>
+      <span class="industry-pill">🏭 Cement Industry</span>
+      <span class="industry-pill">🔬 Glass Industry</span>
+      <span class="industry-pill">🏺 Ceramic Industry</span>
+      <span class="industry-pill">⚙️ Foundry Industry</span>
+      <span class="industry-pill">🛢️ Petrochemical Industry</span>
+    </div>
+    <a href="industries.html" class="btn btn-outline" style="margin-top:36px;">Explore All Industries</a>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CTA BANNER -->
+<section class="section">
+  <div class="container">
+    <div class="cta-banner fade-in">
+      <div>
+        <h2 class="section-title" style="margin-bottom:8px;">Ready to source premium Chamotte?</h2>
+        <p style="color:var(--text-muted);">Request a sample, get a quote, or speak to our technical team today.</p>
+      </div>
+      <div style="display:flex;gap:16px;flex-wrap:wrap;">
+        <a href="contact.html" class="btn btn-primary">Request a Sample</a>
+        <a href="contact.html" class="btn btn-ghost">Ask for Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand-name">SHIV SHAKTI REFRACTORY</div>
+        <p>Reliable manufacturer and exporter of high-quality Chamotte and Calcined Bauxite refractory raw materials from Bhuj, Kachchh, Gujarat, India.</p>
+        <div class="footer-contact-item"><span class="icon">📍</span><span>Hospital Road, Bhuj-Kachchh, Gujarat, India</span></div>
+        <div class="footer-contact-item"><span class="icon">📞</span><span>+91 9978909962 &nbsp;|&nbsp; +91 9925397905</span></div>
+        <div class="footer-contact-item"><span class="icon">✉️</span><span>marketing@shivsr.com</span></div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="quality.html">Quality</a></li>
+          <li><a href="exports.html">Exports</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="chamotte-grades.html">Shivmotte LF 42</a></li>
+          <li><a href="chamotte-grades.html">Shivmotte LF 46</a></li>
+          <li><a href="chamotte-grades.html">Shivmotte LF 54</a></li>
+          <li><a href="chamotte-grades.html">Shivmotte LF 60</a></li>
+          <li><a href="chamotte-grades.html">Shivmotte LF 70</a></li>
+          <li><a href="products.html">Calcined Bauxite</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="applications.html">Applications</a></li>
+          <li><a href="industries.html">Industries</a></li>
+          <li><a href="infrastructure.html">Infrastructure</a></li>
+          <li><a href="downloads.html">TDS / SDS</a></li>
+          <li><a href="downloads.html">Product Brochure</a></li>
+          <li><a href="downloads.html">Test Certificates</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Shiv Shakti Refractory. All rights reserved.</p>
+      <p>Chamotte Supplier India · Refractory Raw Materials · Bhuj, Kachchh</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Hamburger
+  const ham = document.getElementById('hamburger');
+  const nav = document.getElementById('navLinks');
+  ham.addEventListener('click', () => { ham.classList.toggle('open'); nav.classList.toggle('open'); });
+
+  // Fade-in on scroll
+  const els = document.querySelectorAll('.fade-in');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  els.forEach(el => obs.observe(el));
+</script>
+  <div class="mobile-cta-wrap">
+    <a href="https://wa.me/919978909962" class="floating-wa" target="_blank" rel="noopener" aria-label="WhatsApp Us">
+      <span>💬</span>
+    </a>
+  </div>
 </body>
 </html>

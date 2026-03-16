@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery – Manufacturing & Product Showcase | Shiv Shakti Refractory</title>
+  <meta name="description" content="View our extensive gallery showcasing the Shiv Shakti Refractory facility, 61m rotary kiln, high-quality Chamotte products, and international export packing.">
+  <meta name="keywords" content="Shiv Shakti Refractory gallery, refractory manufacturing photos, Chamotte products images, rotary kiln machinery">
+  <link rel="canonical" href="https://www.shivsr.com/gallery.html">
+  <style>
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+    .gallery-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      transition: all var(--transition);
+      cursor: pointer;
+    }
+    .gallery-item:hover {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-glow-strong);
+      transform: translateY(-5px);
+    }
+    .gallery-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--transition);
+    }
+    .gallery-item:hover .gallery-img {
+      transform: scale(1.05);
+    }
+    /* Simple Lightbox */
+    .lightbox {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.95);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+      padding: 40px;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox-img { max-width: 90%; max-height: 90%; object-fit: contain; border: 2px solid var(--primary); box-shadow: var(--shadow-glow-strong); }
+    .lightbox-close { position: absolute; top: 20px; right: 30px; font-size: 2rem; color: white; cursor: pointer; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-brand"><img src="images/logo-transparent.png" alt="Shiv Shakti Refractory" class="nav-logo"></a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="products.html">Products</a>
+      <a href="chamotte-grades.html">Chamotte Grades</a>
+      <a href="applications.html">Applications</a>
+      <a href="industries.html">Industries</a>
+      <a href="quality.html">Quality</a>
+      <a href="infrastructure.html">Infrastructure</a>
+      <a href="exports.html">Exports</a>
+      <a href="downloads.html">Downloads</a>
+      <a href="gallery.html" class="active">Gallery</a>
+      <a href="contact.html" class="btn btn-primary nav-cta">Contact Us</a>
+    </div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container page-hero-content">
+    <nav class="breadcrumb"><a href="index.html">Home</a><span class="sep">›</span><span>Gallery</span></nav>
+    <span class="section-tag">Facility & Equipment</span>
+    <h1>Visual <span class="text-primary">Gallery</span></h1>
+    <p>A glimpse into our state-of-the-art manufacturing facility, advanced laboratory, and high-quality refractory products.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="gallery-grid" id="galleryGrid">
+      <!-- Photos will be inserted here -->
+    </div>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox">
+  <span class="lightbox-close" id="lightboxClose">&times;</span>
+  <img src="" alt="" class="lightbox-img" id="lightboxImg">
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand-name">SHIV SHAKTI REFRACTORY</div>
+        <p>Reliable manufacturer and exporter of high-quality Chamotte and Calcined Bauxite refractory raw materials from Bhuj, Kachchh, Gujarat, India.</p>
+        <div class="footer-contact-item"><span class="icon">📍</span><span>Hospital Road, Bhuj-Kachchh, Gujarat, India</span></div>
+        <div class="footer-contact-item"><span class="icon">📞</span><span>+91 9978909962 &nbsp;|&nbsp; +91 9925397905</span></div>
+        <div class="footer-contact-item"><span class="icon">✉️</span><span>marketing@shivsr.com</span></div>
+      </div>
+      <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="products.html">Products</a></li><li><a href="quality.html">Quality</a></li><li><a href="exports.html">Exports</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+      <div class="footer-col"><h4>Products</h4><ul><li><a href="chamotte-grades.html">Shivmotte LF 42</a></li><li><a href="chamotte-grades.html">Shivmotte LF 46</a></li><li><a href="chamotte-grades.html">Shivmotte LF 54</a></li><li><a href="chamotte-grades.html">Shivmotte LF 60</a></li><li><a href="chamotte-grades.html">Shivmotte LF 70</a></li><li><a href="products.html">Calcined Bauxite</a></li></ul></div>
+      <div class="footer-col"><h4>Resources</h4><ul><li><a href="applications.html">Applications</a></li><li><a href="industries.html">Industries</a></li><li><a href="infrastructure.html">Infrastructure</a></li><li><a href="downloads.html">TDS / SDS</a></li><li><a href="downloads.html">Brochure</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Shiv Shakti Refractory. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const ham = document.getElementById('hamburger'); const nav = document.getElementById('navLinks');
+  ham.addEventListener('click', () => { ham.classList.toggle('open'); nav.classList.toggle('open'); });
+
+  const images = [
+    "DJI_0110.webp", "DJI_0111.webp", "DJI_0112.webp", "DJI_0113.webp", "DJI_0114.webp", "DJI_0115.webp", "DJI_0116.webp", "DJI_0117.webp", "DJI_0118.webp", "DJI_0119.webp",
+    "DJI_0128.webp", "DJI_0129.webp", "DJI_0130.webp", "DJI_0131.webp", "DJI_0132.webp", "DSC_0403.webp", "RSL_0396.webp", "RSL_0397.webp", "RSL_0398.webp", "RSL_0407.webp",
+    "RSL_0408.webp", "RSL_0409.webp", "RSL_0410.webp", "RSL_0411.webp", "RSL_0412.webp", "RSL_0413.webp", "RSL_0414.webp", "RSL_0415.webp", "RSL_0416.webp", "RSL_0417.webp",
+    "RSL_0418.webp", "RSL_0419.webp", "RSL_0420.webp", "RSL_0421.webp", "RSL_0422.webp", "RSL_0423.webp", "RSL_0424.webp", "RSL_0425.webp", "RSL_0426.webp", "RSL_0427.webp",
+    "RSL_0428.webp", "RSL_0429.webp", "RSL_0430.webp", "RSL_0431.webp", "RSL_0432.webp", "RSL_0433.webp", "RSL_0434.webp", "RSL_0435.webp", "RSL_0436.webp", "RSL_0437.webp",
+    "RSL_0438.webp", "RSL_0439.webp", "RSL_0440.webp", "RSL_0441.webp", "RSL_0442.webp", "RSL_0443.webp", "RSL_0444.webp", "RSL_0445.webp", "RSL_0446.webp", "RSL_0447.webp",
+    "RSL_0448.webp", "RSL_0449.webp", "RSL_0450.webp", "RSL_0451.webp", "RSL_0452.webp", "RSL_0453.webp", "RSL_0454.webp", "RSL_0456.webp", "RSL_0458.webp", "RSL_0459.webp",
+    "RSL_0460.webp", "RSL_0461.webp", "RSL_0462.webp", "RSL_0464.webp", "RSL_0465.webp", "RSL_0466.webp", "RSL_0467.webp", "RSL_0468.webp", "RSL_0469.webp", "RSL_0471.webp",
+    "RSL_0472.webp", "RSL_0473.webp", "RSL_0474.webp", "RSL_0475.webp", "RSL_0476.webp", "RSL_0477.webp", "RSL_0478.webp", "RSL_0479.webp", "RSL_0480.webp", "RSL_0481.webp",
+    "RSL_0482.webp", "RSL_0483.webp", "RSL_0484.webp", "RSL_0485.webp", "RSL_0486.webp", "RSL_0487.webp", "RSL_0488.webp", "RSL_0489.webp", "RSL_0490.webp", "RSL_0491.webp",
+    "RSL_0492.webp", "RSL_0493.webp", "RSL_0494.webp", "RSL_0495.webp", "RSL_0496.webp", "RSL_0497.webp", "RSL_0498.webp", "RSL_0499.webp", "RSL_0500.webp", "RSL_0501.webp",
+    "RSL_0502.webp", "RSL_0503.webp", "RSL_0504.webp", "RSL_0505.webp", "RSL_0506.webp", "RSL_0507.webp", "RSL_0508.webp", "RSL_0509.webp", "RSL_0510.webp", "RSL_0511.webp",
+    "RSL_0512.webp", "RSL_0513.webp", "RSL_0514.webp", "RSL_0515.webp", "RSL_0516.webp", "RSL_0517.webp", "RSL_0518.webp", "RSL_0519.webp", "RSL_0520.webp", "RSL_0521.webp",
+    "RSL_0522.webp", "RSL_0523.webp", "RSL_0524.webp", "RSL_0525.webp", "RSL_0526.webp", "RSL_0527.webp", "RSL_0528.webp", "RSL_0529.webp", "RSL_0530.webp", "RSL_0531.webp",
+    "RSL_0532.webp", "RSL_0533.webp", "RSL_0534.webp", "RSL_0535.webp", "RSL_0536.webp", "RSL_0537.webp", "RSL_0538.webp", "RSL_0539.webp", "RSL_0540.webp", "RSL_0541.webp",
+    "RSL_0542.webp", "RSL_0543.webp", "RSL_0544.webp", "RSL_0545.webp", "RSL_0546.webp", "RSL_0547.webp", "RSL_0548.webp", "RSL_0549.webp", "RSL_0550.webp", "RSL_0551.webp",
+    "RSL_0552.webp", "RSL_0553.webp", "RSL_0554.webp", "RSL_0555.webp", "RSL_0556.webp", "RSL_0557.webp", "RSL_0558.webp", "RSL_0559.webp", "RSL_0560.webp", "RSL_0561.webp",
+    "RSL_0562.webp", "RSL_0563.webp", "RSL_0564.webp", "RSL_0565.webp", "RSL_0566.webp", "RSL_0567.webp", "RSL_0568.webp", "RSL_0569.webp", "RSL_0570.webp", "RSL_0571.webp",
+    "RSL_0572.webp", "RSL_0573.webp", "RSL_0574.webp", "RSL_0575.webp"
+  ];
+
+  const grid = document.getElementById('galleryGrid');
+  const lb = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lightboxImg');
+  const lbClose = document.getElementById('lightboxClose');
+
+  images.forEach(img => {
+    const item = document.createElement('div');
+    item.className = 'gallery-item';
+    item.innerHTML = `<img src="images/${img}" alt="Shiv Shakti Refractory Gallery" class="gallery-img">`;
+    item.onclick = () => {
+      lbImg.src = `images/${img}`;
+      lb.classList.add('open');
+    };
+    grid.appendChild(item);
+  });
+
+  lbClose.onclick = () => lb.classList.remove('open');
+  lb.onclick = (e) => { if(e.target === lb) lb.classList.remove('open'); };
+
+  document.querySelectorAll('.fade-in').forEach(el => {
+    new IntersectionObserver((en) => { en.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');} }); }, {threshold:0.1}).observe(el);
+  });
+</script>
+  <div class="mobile-cta-wrap">
+    <a href="https://wa.me/919978909962" class="floating-wa" target="_blank" rel="noopener" aria-label="WhatsApp Us">
+      <span>💬</span>
+    </a>
+  </div>
+</body>
+</html>
