@@ -205,21 +205,55 @@ ul { list-style: none; }
 
 /* ---------- HERO ---------- */
 .hero {
-  min-height: 100vh;
+  min-height: 60vh;
   display: flex;
   align-items: center;
-  background: var(--gradient-hero);
+  background-image: url('images/hero.webp');
+  background-size: cover;
+  background-position: center bottom;
+  background-attachment: fixed;
   position: relative;
   overflow: hidden;
   padding-top: var(--navbar-h);
 }
 .hero::before {
-  content: '';
-  position: absolute;
-  top: -200px; right: -200px;
-  width: 600px; height: 600px;
-  background: radial-gradient(circle, rgba(245,158,11,0.12) 0%, transparent 70%);
-  border-radius: 50%;
+  content: none;
+}
+.hero .container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Move down */
+  text-align: center;
+  padding-bottom: 80px; /* Space from bottom */
+}
+.hero h1 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: clamp(1.4rem, 4.5vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 0;
+  white-space: nowrap; /* Force 1 line */
+  color: #ffffff;
+  
+  /* Emboss Effect */
+  text-shadow: 
+    -1px -1px 0px rgba(255, 255, 255, 0.5),  /* Light highlight top-left */
+     1px  1px 1px rgba(0, 0, 0, 0.9),         /* Deep shadow bottom-right */
+     0px  4px 15px rgba(0, 0, 0, 0.8);        /* Visibility shadow */
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+}
+.capability-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+@media (max-width: 900px) {
+  .capability-grid { grid-template-columns: 1fr; gap: 40px; }
 }
 .hero::after {
   content: '';
@@ -348,6 +382,22 @@ ul { list-style: none; }
   border-color: var(--primary);
   box-shadow: var(--shadow-glow-strong);
   transform: translateY(-4px);
+}
+.card-photo-wrapper {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: var(--radius) var(--radius) 0 0;
+  border-bottom: 1px solid var(--border);
+}
+.card-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition);
+}
+.product-card:hover .card-photo {
+  transform: scale(1.05);
 }
 .card-icon {
   width: 52px; height: 52px;

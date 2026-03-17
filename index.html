@@ -3,11 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shiv Shakti Refractory – Leading Chamotte & Refractory Raw Materials Manufacturer</title>
+  <title>Shiv Shakti Refractory – Leading Chamotte &amp; Refractory Raw Materials Manufacturer</title>
   <meta name="description" content="Shiv Shakti Refractory is a premier manufacturer and exporter of high-quality Chamotte and Calcined Bauxite from Bhuj, India. ISO 9001 certified refractory raw materials.">
   <meta name="keywords" content="Chamotte manufacturer India, Calcined Bauxite supplier, refractory raw materials, fire clay grog, Chamotte exporter India, Shiv Shakti Refractory Bhuj">
   <link rel="canonical" href="https://www.shivsr.com/">
   <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Rajdhani:wght@500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -22,167 +24,246 @@
       "email": "marketing@shivsr.com",
       "areaServed": "IN",
       "availableLanguage": ["en", "Hindi", "Gujarati"]
-    },
-    "sameAs": [
-      "https://www.facebook.com/shivshaktirefractory",
-      "https://www.linkedin.com/company/shiv-shakti-refractory"
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Shiv Shakti Refractory",
-    "image": "https://www.shivsr.com/images/infrastructure/kiln.jpg",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Hospital Road",
-      "addressLocality": "Bhuj",
-      "addressRegion": "Gujarat",
-      "postalCode": "370001",
-      "addressCountry": "IN"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 23.2381,
-      "longitude": 69.6669
-    },
-    "url": "https://www.shivsr.com/",
-    "telephone": "+919978909962",
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday"
-        ],
-        "opens": "09:00",
-        "closes": "18:00"
-      }
-    ]
+    }
   }
   </script>
   <style>
-    /* HERO */
-    .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-    .hero-visual { display: flex; flex-direction: column; gap: 16px; }
-    .hero-card {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 20px 24px;
+    /* ====== INDEX PAGE SPECIFIC STYLES ====== */
+
+    /* -- Hero -- */
+    .hero {
+      min-height: 60vh;
       display: flex;
-      align-items: center;
-      gap: 16px;
-      transition: all var(--transition);
-    }
-    .hero-card:hover { border-color: var(--border-glow); background: rgba(245,158,11,0.06); }
-    .hero-card-icon {
-      width: 44px; height: 44px;
-      background: var(--gradient-amber);
-      border-radius: 10px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.2rem; flex-shrink: 0;
-    }
-    .hero-card-text { font-size: 0.88rem; }
-    .hero-card-text strong { display: block; color: var(--text-main); }
-    .hero-card-text span { color: var(--text-muted); }
-
-    /* PRODUCTS SECTION */
-    .product-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      transition: all var(--transition);
-    }
-    .product-card { transition: all var(--transition); }
-    .product-card-header {
-      background: linear-gradient(135deg, rgba(245,158,11,0.15), rgba(245,158,11,0.05));
-      padding: 32px 28px 24px;
-      border-bottom: 1px solid var(--border);
-    }
-    .product-card-header h3 { font-family: 'Rajdhani',sans-serif; font-size: 1.5rem; font-weight: 700; margin: 12px 0 8px; }
-    .product-card-body { padding: 24px 28px; }
-    .grade-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
-    .grade-pill {
-      background: rgba(245,158,11,0.1);
-      border: 1px solid var(--border-glow);
-      color: var(--primary);
-      padding: 4px 12px;
-      border-radius: 50px;
-      font-size: 0.78rem;
-      font-weight: 600;
-    }
-
-    /* WHY SECTION */
-    .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-    .why-item {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 28px;
+      align-items: flex-end;
+      background-image: url('images/hero.webp');
+      background-size: cover;
+      background-position: center bottom;
+      background-attachment: fixed;
       position: relative;
       overflow: hidden;
-      transition: all var(--transition);
+      padding-top: var(--navbar-h);
+    }
+    .hero::before { content: none; }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(10,10,20,0.75) 0%, rgba(10,10,20,0.1) 60%, transparent 100%);
+    }
+    .hero-bottom {
+      position: relative; z-index: 2;
+      width: 100%;
+      padding: 60px 0 56px;
+      text-align: center;
+    }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: rgba(245,158,11,0.15);
+      border: 1px solid rgba(245,158,11,0.4);
+      color: #f59e0b;
+      padding: 6px 18px; border-radius: 50px;
+      font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .hero-eyebrow .dot { width: 7px; height: 7px; background: #f59e0b; border-radius: 50%; animation: pulse 2s infinite; }
+    .hero-title {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: clamp(2.2rem, 6vw, 5rem);
+      font-weight: 800; line-height: 1.05; color: #fff;
+      text-shadow: 0 2px 16px rgba(0,0,0,0.7),
+                   -1px -1px 0 rgba(255,255,255,0.15),
+                    1px  1px 3px rgba(0,0,0,0.9);
+      margin-bottom: 28px;
+      white-space: nowrap;
+    }
+    .hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+    /* -- Stats Bar -- */
+    .stats-bar {
+      background: var(--bg-card2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .stats-bar-inner {
+      display: flex; justify-content: center; flex-wrap: wrap;
+    }
+    .stat-item {
+      display: flex; align-items: center; gap: 16px;
+      padding: 28px 48px;
+      border-right: 1px solid var(--border);
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-num {
+      font-family: 'Rajdhani', sans-serif; font-size: 2.4rem; font-weight: 700; color: var(--primary); line-height: 1;
+    }
+    .stat-label { font-size: 0.82rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; line-height: 1.4; }
+
+    /* -- Intro split -- */
+    .intro-split {
+      padding: clamp(48px, 7vw, 80px) 0;
+    }
+    .intro-split-inner {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 56px;
+      align-items: center;
+    }
+    .intro-img {
+      border-radius: var(--radius-lg);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.5);
+      aspect-ratio: 4 / 3;
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+    }
+    .intro-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+    .intro-img:hover img { transform: scale(1.04); }
+    .intro-text {
+      padding-right: 32px;
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    .intro-text .section-tag { margin-bottom: 12px; }
+    .intro-text h2 { font-family: 'Rajdhani', sans-serif; font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 700; line-height: 1.2; margin-bottom: 18px; }
+    .intro-text p { color: var(--text-muted); font-size: 0.98rem; margin-bottom: 14px; }
+    .intro-features { display: flex; flex-direction: column; gap: 12px; margin: 24px 0 32px; }
+    .intro-feat {
+      display: flex; align-items: center; gap: 12px;
+      padding: 12px 16px; border-radius: var(--radius);
+      background: rgba(245,158,11,0.06); border: 1px solid rgba(245,158,11,0.15);
+      font-size: 0.9rem; font-weight: 500;
+    }
+    .intro-feat-icon {
+      width: 36px; height: 36px; flex-shrink: 0;
+      background: var(--gradient-amber); border-radius: 8px;
+      display: flex; align-items: center; justify-content: center; font-size: 1rem;
+    }
+
+    /* -- Products -- */
+    .product-card {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); overflow: hidden; transition: all var(--transition);
+    }
+    .product-card:hover { border-color: var(--primary); box-shadow: var(--shadow-glow-strong); transform: translateY(-5px); }
+    .pc-img { height: 200px; overflow: hidden; }
+    .pc-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+    .product-card:hover .pc-img img { transform: scale(1.06); }
+    .pc-body { padding: 24px 26px; }
+    .pc-body .badge { margin-bottom: 10px; }
+    .pc-body h3 { font-family: 'Rajdhani', sans-serif; font-size: 1.45rem; font-weight: 700; margin-bottom: 8px; }
+    .pc-body p { color: var(--text-muted); font-size: 0.88rem; margin-bottom: 16px; }
+    .grade-pills { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 20px; }
+    .grade-pill {
+      background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.35);
+      color: var(--primary); padding: 3px 12px; border-radius: 50px;
+      font-size: 0.76rem; font-weight: 600;
+    }
+
+    /* -- Process strip -- */
+    .process-strip {
+      background: var(--bg-card2);
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      padding: clamp(48px, 8vw, 80px) 0;
+    }
+    .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+    .process-step {
+      padding: 32px 28px; border-right: 1px solid var(--border);
+      position: relative; text-align: center;
+    }
+    .process-step:last-child { border-right: none; }
+    .process-step::after {
+      content: '→';
+      position: absolute; right: -10px; top: 50%; transform: translateY(-50%);
+      color: var(--primary); font-size: 1.2rem; z-index: 1;
+    }
+    .process-step:last-child::after { display: none; }
+    .step-num {
+      width: 48px; height: 48px; margin: 0 auto 16px;
+      background: var(--gradient-amber); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Rajdhani', sans-serif; font-size: 1.2rem; font-weight: 700; color: #1a1a2e;
+    }
+    .process-step h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 8px; }
+    .process-step p { color: var(--text-muted); font-size: 0.82rem; }
+
+    /* -- Photo mosaic -- */
+    .photo-mosaic { display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: 260px 260px; gap: 6px; }
+    .mosaic-item { overflow: hidden; border-radius: 4px; }
+    .mosaic-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+    .mosaic-item:hover img { transform: scale(1.05); }
+    .mosaic-large { grid-row: 1 / 3; }
+
+    /* -- Why grid -- */
+    .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .why-item {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 28px;
+      position: relative; overflow: hidden; transition: all var(--transition);
     }
     .why-item::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
-      background: var(--gradient-amber);
-      transform: scaleX(0);
-      transition: transform var(--transition);
+      content: ''; position: absolute; top: 0; left: 0; right: 0;
+      height: 3px; background: var(--gradient-amber);
+      transform: scaleX(0); transition: transform var(--transition);
     }
     .why-item:hover::before { transform: scaleX(1); }
-    .why-item:hover { border-color: var(--primary); }
-    .why-num { font-family: 'Rajdhani',sans-serif; font-size: 3rem; font-weight: 700; color: rgba(245,158,11,0.4); line-height: 1; margin-bottom: 8px; }
+    .why-item:hover { border-color: var(--primary); box-shadow: var(--shadow-glow); transform: translateY(-3px); }
+    .why-num { font-family: 'Rajdhani', sans-serif; font-size: 2.6rem; font-weight: 700; color: rgba(245,158,11,0.3); line-height: 1; margin-bottom: 10px; }
     .why-item h3 { font-size: 1rem; font-weight: 600; margin-bottom: 8px; }
-    .why-item p { color: var(--text-muted); font-size: 0.88rem; }
+    .why-item p { color: var(--text-muted); font-size: 0.87rem; line-height: 1.6; }
 
-    /* INDUSTRIES */
-    .industry-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 50px;
-      padding: 10px 20px;
-      font-size: 0.9rem;
-      font-weight: 500;
-      transition: all var(--transition);
-      cursor: default;
+    /* -- Industries -- */
+    .industry-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .ind-card {
+      position: relative; overflow: hidden; border-radius: var(--radius);
+      height: 200px; cursor: default;
     }
-    .industry-pill:hover { border-color: var(--border-glow); background: rgba(245,158,11,0.06); color: var(--primary); }
-    .industry-pills { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+    .ind-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+    .ind-card:hover img { transform: scale(1.08); }
+    .ind-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(15,15,26,0.85) 30%, transparent 80%);
+      display: flex; align-items: flex-end; padding: 18px 20px;
+    }
+    .ind-name { font-size: 1rem; font-weight: 700; color: #fff; display: flex; align-items: center; gap: 8px; }
 
-    /* CTA BANNER */
+    /* -- CTA Banner -- */
     .cta-banner {
-      background: linear-gradient(135deg, #1a1000 0%, #1a0a00 50%, #0f0f1a 100%);
-      border: 1px solid var(--border-glow);
-      border-radius: var(--radius-lg);
-      padding: 52px 60px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 32px;
-      flex-wrap: wrap;
+      background: linear-gradient(135deg, #1a0d00 0%, #1a0a00 60%, #0f0f1a 100%);
+      border: 1px solid rgba(245,158,11,0.35);
+      border-radius: var(--radius-lg); overflow: hidden;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+    }
+    .cta-left { padding: 60px 52px; }
+    .cta-right { position: relative; min-height: 300px; }
+    .cta-right img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.7; }
+    .cta-right-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to right, rgba(26,13,0,0.8), transparent);
     }
 
+    /* -- Responsive -- */
+    @media (max-width: 1024px) {
+      .process-steps { grid-template-columns: repeat(2, 1fr); }
+      .process-step:nth-child(2) { border-right: none; }
+      .process-step:nth-child(2)::after { display: none; }
+      .industry-cards { grid-template-columns: repeat(2, 1fr); }
+      .cta-banner { grid-template-columns: 1fr; }
+      .cta-right { height: 260px; }
+    }
     @media (max-width: 900px) {
-      .hero-grid { grid-template-columns: 1fr; }
+      .intro-split { grid-template-columns: 1fr; }
+      .intro-img { height: 340px; }
+      .intro-text { padding: 40px 28px; }
       .why-grid { grid-template-columns: 1fr 1fr; }
+      .photo-mosaic { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+      .mosaic-large { grid-row: auto; }
+      .stats-bar-inner { justify-content: flex-start; }
+      .stat-item { border-right: none; border-bottom: 1px solid var(--border); width: 50%; padding: 22px 28px; }
     }
     @media (max-width: 600px) {
       .why-grid { grid-template-columns: 1fr; }
-      .cta-banner { padding: 36px 24px; }
+      .industry-cards { grid-template-columns: 1fr; }
+      .process-steps { grid-template-columns: 1fr; }
+      .cta-left { padding: 40px 24px; }
+      .hero-title { white-space: normal; }
+      .stat-item { width: 100%; }
     }
   </style>
 </head>
@@ -214,43 +295,71 @@
 
 <!-- HERO -->
 <section class="hero">
+  <div class="hero-overlay"></div>
   <div class="container">
-    <div class="hero-grid">
-      <div class="hero-content fade-in">
-        <div class="hero-tag"><span class="dot"></span> ISO 9001 Certified Manufacturer</div>
-        <h1>Welcome to <span class="highlight">Shiv Shakti</span> Refractory</h1>
-        <p class="hero-sub">Premium Chamotte and Refractory Raw Materials — Reliable manufacturer and exporter from Bhuj, Kachchh, India.</p>
-        <div class="hero-buttons">
-          <a href="products.html" class="btn btn-primary">Explore Products</a>
-          <a href="contact.html" class="btn btn-outline">Request a Quote</a>
-        </div>
-        <div class="hero-stats">
-          <div class="hero-stat"><div class="num">3000+</div><div class="label">MT / Month Capacity</div></div>
-          <div class="hero-stat"><div class="num">15+</div><div class="label">Years Experience</div></div>
-          <div class="hero-stat"><div class="num">4+</div><div class="label">Export Markets</div></div>
-        </div>
+    <div class="hero-bottom fade-in">
+      <div class="hero-eyebrow"><span class="dot"></span> ISO 9001 Certified Manufacturer · Bhuj, Kachchh</div>
+      <h1 class="hero-title">Welcome to <span class="text-primary" style="color:#f59e0b">Shiv Shakti</span> Refractory</h1>
+      <div class="hero-ctas">
+        <a href="products.html" class="btn btn-primary">Explore Products</a>
+        <a href="contact.html" class="btn btn-outline">Request a Quote</a>
+        <a href="gallery.html" class="btn btn-ghost">View Gallery</a>
       </div>
-      <div class="hero-visual fade-in" style="animation-delay:0.2s">
-        <div class="hero-card">
-          <div class="hero-card-icon">🏭</div>
-          <div class="hero-card-text"><strong>Rotary Kiln Manufacturing</strong><span>61m × 2.5m – Bhuj, Kachchh</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="container">
+    <div class="stats-bar-inner fade-in">
+      <div class="stat-item">
+        <div class="stat-num">3000+</div>
+        <div class="stat-label">MT / Month<br>Production Capacity</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">15+</div>
+        <div class="stat-label">Years of<br>Manufacturing Excellence</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">4+</div>
+        <div class="stat-label">Export<br>Markets Worldwide</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">10+</div>
+        <div class="stat-label">Washing Plants<br>In-House</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- INTRO SPLIT -->
+<section class="intro-split">
+  <div class="container">
+    <div class="intro-split-inner fade-in">
+      <div class="intro-img">
+        <img src="images/DJI_0110.webp" alt="Shiv Shakti Refractory Facility – Aerial View">
+      </div>
+      <div class="intro-text">
+        <span class="section-tag">Who We Are</span>
+        <h2>Premium Refractory <span class="text-primary">Raw Materials</span> from the Heart of Kachchh</h2>
+        <p>Shiv Shakti Refractory is a leading manufacturer and exporter of Chamotte and Calcined Bauxite, operating from Bhuj, Kachchh, Gujarat, India since over 15 years.</p>
+        <p>Our integrated mine-to-market model, combined with stringent quality control and state-of-the-art calcination kiln, ensures every shipment meets exacting international standards.</p>
+        <div class="intro-features">
+          <div class="intro-feat"><div class="intro-feat-icon">🏭</div> 61m × 2.5m Rotary Kiln – 3000 MT/Month</div>
+          <div class="intro-feat"><div class="intro-feat-icon">🔬</div> XRF &amp; Chemical Testing – Every Batch</div>
+          <div class="intro-feat"><div class="intro-feat-icon">🌍</div> Exports to UAE, Saudi Arabia &amp; Europe</div>
         </div>
-        <div class="hero-card">
-          <div class="hero-card-icon">🧪</div>
-          <div class="hero-card-text"><strong>Lab Tested – Every Batch</strong><span>XRF · Chemical · ASTM C:357</span></div>
-        </div>
-        <div class="hero-card">
-          <div class="hero-card-icon">🌍</div>
-          <div class="hero-card-text"><strong>Global Export</strong><span>India · UAE · Saudi Arabia · Europe</span></div>
-        </div>
-        <div class="hero-card">
-          <div class="hero-card-icon">⚙️</div>
-          <div class="hero-card-text"><strong>Custom Particle Sizes</strong><span>0–1 mm, 1–3 mm, 3–5 mm, 200 Mesh & more</span></div>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;">
+          <a href="about.html" class="btn btn-primary">About Us</a>
+          <a href="infrastructure.html" class="btn btn-outline">Our Infrastructure</a>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<div class="divider"></div>
 
 <!-- PRODUCTS -->
 <section class="section">
@@ -258,59 +367,107 @@
     <div class="text-center">
       <span class="section-tag">Our Products</span>
       <h2 class="section-title">High-Grade Refractory Raw Materials</h2>
-      <p class="section-subtitle">Manufactured at our facility in Bhuj with rigorous quality control, available in multiple grades and custom particle sizes.</p>
+      <p class="section-subtitle">Manufactured in Bhuj with rigorous quality control and available in multiple grades and custom particle sizes.</p>
     </div>
     <div class="grid-3 fade-in">
       <div class="product-card">
-        <div class="product-card-header">
+        <div class="pc-img"><img src="images/RSL_0550.webp" alt="Chamotte Shivmotte LF"></div>
+        <div class="pc-body">
           <span class="badge">Product 01</span>
-          <h3>Chamotte (Shivmotte LF)</h3>
-          <p style="color:var(--text-muted);font-size:0.9rem;">Standard & high-alumina chamotte for refractory, ceramics and foundry industries.</p>
-        </div>
-        <div class="product-card-body">
-          <p style="color:var(--text-muted);font-size:0.88rem;margin-bottom:12px;">Available Grades:</p>
+          <h3>Chamotte — Shivmotte LF</h3>
+          <p>Standard &amp; high-alumina chamotte for refractory, ceramics and foundry industries.</p>
           <div class="grade-pills">
-            <span class="grade-pill">LF 42</span>
-            <span class="grade-pill">LF 46</span>
-            <span class="grade-pill">LF 54</span>
-            <span class="grade-pill">LF 60</span>
-            <span class="grade-pill">LF 70+</span>
+            <span class="grade-pill">LF 42</span><span class="grade-pill">LF 46</span>
+            <span class="grade-pill">LF 54</span><span class="grade-pill">LF 60</span><span class="grade-pill">LF 70+</span>
           </div>
-          <a href="chamotte-grades.html" class="btn btn-outline" style="margin-top:20px;width:100%;justify-content:center;">View All Grades</a>
+          <a href="chamotte-grades.html" class="btn btn-outline" style="width:100%;justify-content:center;">View All Grades</a>
         </div>
       </div>
       <div class="product-card">
-        <div class="product-card-header">
+        <div class="pc-img"><img src="images/RSL_0514.webp" alt="Calcined Bauxite"></div>
+        <div class="pc-body">
           <span class="badge">Product 02</span>
           <h3>Calcined Bauxite</h3>
-          <p style="color:var(--text-muted);font-size:0.9rem;">High-alumina calcined bauxite with superior refractory performance for demanding applications.</p>
-        </div>
-        <div class="product-card-body">
-          <p style="color:var(--text-muted);font-size:0.88rem;margin-bottom:12px;">Available Grades:</p>
+          <p>High-alumina calcined bauxite with superior refractory performance for demanding applications.</p>
           <div class="grade-pills">
-            <span class="grade-pill">CB 80</span>
-            <span class="grade-pill">CB 82</span>
-            <span class="grade-pill">CB 86</span>
+            <span class="grade-pill">CB 80</span><span class="grade-pill">CB 82</span><span class="grade-pill">CB 86</span>
           </div>
-          <a href="products.html" class="btn btn-outline" style="margin-top:20px;width:100%;justify-content:center;">Learn More</a>
+          <a href="products.html" class="btn btn-outline" style="width:100%;justify-content:center;">Learn More</a>
         </div>
       </div>
-      <div class="product-card" style="border-color:var(--border-glow);background:linear-gradient(135deg,rgba(245,158,11,0.06),var(--bg-card))">
-        <div class="product-card-header" style="background:linear-gradient(135deg,rgba(245,158,11,0.18),rgba(245,158,11,0.06))">
-          <span class="badge">Custom Sizes</span>
+      <div class="product-card" style="border-color:rgba(245,158,11,0.4)">
+        <div class="pc-img"><img src="images/RSL_0500.webp" alt="Custom Particle Sizing"></div>
+        <div class="pc-body">
+          <span class="badge">Custom</span>
           <h3>Custom Particle Sizing</h3>
-          <p style="color:var(--text-muted);font-size:0.9rem;">We deliver particle sizes as per customer requirement — precision gradation for consistent results.</p>
-        </div>
-        <div class="product-card-body">
-          <ul class="checklist">
+          <p>Precision gradation to exact customer specifications — consistent, repeatable results every order.</p>
+          <ul class="checklist" style="margin-bottom:20px;">
             <li>0–1 mm · 1–3 mm · 3–5 mm</li>
-            <li>200 Mesh powder</li>
-            <li>Custom gradation on request</li>
-            <li>Jumbo bags (1250 kg) or as needed</li>
+            <li>200 Mesh powder &amp; custom cuts</li>
+            <li>Jumbo bags (1250 kg) or bulk</li>
           </ul>
-          <a href="contact.html" class="btn btn-primary" style="margin-top:20px;width:100%;justify-content:center;">Request Sample</a>
+          <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;">Request Sample</a>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PROCESS STRIP -->
+<div class="process-strip">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:48px;">
+      <span class="section-tag">How We Work</span>
+      <h2 class="section-title">Mine to Market — Under One Roof</h2>
+    </div>
+    <div class="process-steps fade-in">
+      <div class="process-step">
+        <div class="step-num">01</div>
+        <h4>Mineral Extraction</h4>
+        <p>Own-lease mines ensure consistent raw material quality and supply security.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">02</div>
+        <h4>Washing &amp; Beneficiation</h4>
+        <p>10+ in-house washing plants remove impurities and classify minerals.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">03</div>
+        <h4>Rotary Kiln Calcination</h4>
+        <p>61m × 2.5m kiln calcines at precise temperatures for uniform quality.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">04</div>
+        <h4>QC &amp; Global Dispatch</h4>
+        <p>Lab-tested every batch, then packed and dispatched to customers worldwide.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- PHOTO MOSAIC -->
+<section class="section">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:40px;">
+      <span class="section-tag">Facility &amp; Operations</span>
+      <h2 class="section-title">A Glimpse Inside Our World-Class Facility</h2>
+      <p class="section-subtitle">From aerial drone shots of our Bhuj plant to close-up process photography — see the scale and precision of our operations.</p>
+    </div>
+    <div class="photo-mosaic fade-in">
+      <div class="mosaic-item mosaic-large"><img src="images/DJI_0114.webp" alt="Factory Aerial View"></div>
+      <div class="mosaic-item"><img src="images/DJI_0130.webp" alt="Rotary Kiln Overview"></div>
+      <div class="mosaic-item"><img src="images/RSL_0532.webp" alt="Production Line"></div>
+      <div class="mosaic-item"><img src="images/RSL_0491.webp" alt="Material Processing"></div>
+      <div class="mosaic-item"><img src="images/RSL_0520.webp" alt="Packaging & Dispatch"></div>
+    </div>
+    <div class="text-center" style="margin-top:36px;">
+      <a href="infrastructure.html" class="btn btn-outline">Explore Infrastructure</a>
+      &nbsp;&nbsp;
+      <a href="gallery.html" class="btn btn-ghost">Full Gallery</a>
     </div>
   </div>
 </section>
@@ -325,12 +482,12 @@
       <h2 class="section-title">Why Choose Shiv Shakti Refractory?</h2>
     </div>
     <div class="why-grid fade-in">
-      <div class="why-item"><div class="why-num">01</div><h3>Consistent Chemistry</h3><p>Batch-by-batch chemical analysis ensures uniform Al₂O₃ content and low iron for superior refractoriness.</p></div>
-      <div class="why-item"><div class="why-num">02</div><h3>Mine-to-Market Control</h3><p>Own lease mines and 10+ washing plants gives us full control over supply chain quality and cost.</p></div>
-      <div class="why-item"><div class="why-num">03</div><h3>Custom Sizing</h3><p>Precise particle size control — 0–1 mm, 1–3 mm, 3–5 mm, 200 Mesh or any size as per your spec.</p></div>
-      <div class="why-item"><div class="why-num">04</div><h3>Fast Dispatch</h3><p>3000 MT/month production capacity with own transport fleet enables quick order fulfilment.</p></div>
-      <div class="why-item"><div class="why-num">05</div><h3>Technical Support</h3><p>Dedicated technical team to assist with product selection, TDS, SDS and application guidance.</p></div>
-      <div class="why-item"><div class="why-num">06</div><h3>Export Experience</h3><p>Proven track record exporting to UAE, Saudi Arabia, and Europe with proper documentation & packing.</p></div>
+      <div class="why-item"><div class="why-num">01</div><h3>Consistent Chemistry</h3><p>Batch-by-batch XRF and wet chemical analysis ensures uniform Al₂O₃ content and low iron for superior refractoriness.</p></div>
+      <div class="why-item"><div class="why-num">02</div><h3>Mine-to-Market Control</h3><p>Own lease mines and 10+ washing plants gives us full control over supply chain quality, consistency and cost.</p></div>
+      <div class="why-item"><div class="why-num">03</div><h3>Custom Sizing</h3><p>Precise particle size control — 0–1 mm, 1–3 mm, 3–5 mm, 200 Mesh or any gradation per your specification.</p></div>
+      <div class="why-item"><div class="why-num">04</div><h3>Fast Dispatch</h3><p>3000 MT/month production capacity with our own transport fleet enables quick, reliable order fulfilment.</p></div>
+      <div class="why-item"><div class="why-num">05</div><h3>Technical Support</h3><p>Dedicated technical team to assist with product selection, TDS, SDS and full application guidance.</p></div>
+      <div class="why-item"><div class="why-num">06</div><h3>Export Experience</h3><p>Proven track record exporting to UAE, Saudi Arabia and Europe with proper documentation and packing standards.</p></div>
     </div>
   </div>
 </section>
@@ -339,19 +496,41 @@
 
 <!-- INDUSTRIES SERVED -->
 <section class="section">
-  <div class="container text-center">
-    <span class="section-tag">Industries Served</span>
-    <h2 class="section-title">Powering Refractory Needs Across Industries</h2>
-    <p class="section-subtitle">Our chamotte and calcined bauxite serve critical thermal processing industries worldwide.</p>
-    <div class="industry-pills fade-in">
-      <span class="industry-pill">🏗️ Steel Industry</span>
-      <span class="industry-pill">🏭 Cement Industry</span>
-      <span class="industry-pill">🔬 Glass Industry</span>
-      <span class="industry-pill">🏺 Ceramic Industry</span>
-      <span class="industry-pill">⚙️ Foundry Industry</span>
-      <span class="industry-pill">🛢️ Petrochemical Industry</span>
+  <div class="container">
+    <div class="text-center" style="margin-bottom:40px;">
+      <span class="section-tag">Industries Served</span>
+      <h2 class="section-title">Powering Refractory Needs Across Industries</h2>
+      <p class="section-subtitle">Our chamotte and calcined bauxite serve critical thermal processing industries worldwide.</p>
     </div>
-    <a href="industries.html" class="btn btn-outline" style="margin-top:36px;">Explore All Industries</a>
+    <div class="industry-cards fade-in">
+      <div class="ind-card">
+        <img src="images/RSL_0549.webp" alt="Steel Industry">
+        <div class="ind-overlay"><div class="ind-name">🏗️ Steel Industry</div></div>
+      </div>
+      <div class="ind-card">
+        <img src="images/RSL_0541.webp" alt="Cement Industry">
+        <div class="ind-overlay"><div class="ind-name">🏭 Cement Industry</div></div>
+      </div>
+      <div class="ind-card">
+        <img src="images/RSL_0536.webp" alt="Glass Industry">
+        <div class="ind-overlay"><div class="ind-name">🔬 Glass Industry</div></div>
+      </div>
+      <div class="ind-card">
+        <img src="images/RSL_0524.webp" alt="Ceramic Industry">
+        <div class="ind-overlay"><div class="ind-name">🏺 Ceramic Industry</div></div>
+      </div>
+      <div class="ind-card">
+        <img src="images/RSL_0509.webp" alt="Foundry Industry">
+        <div class="ind-overlay"><div class="ind-name">⚙️ Foundry Industry</div></div>
+      </div>
+      <div class="ind-card">
+        <img src="images/RSL_0492.webp" alt="Petrochemical Industry">
+        <div class="ind-overlay"><div class="ind-name">🛢️ Petrochemical</div></div>
+      </div>
+    </div>
+    <div class="text-center" style="margin-top:36px;">
+      <a href="industries.html" class="btn btn-outline">Explore All Industries</a>
+    </div>
   </div>
 </section>
 
@@ -361,13 +540,18 @@
 <section class="section">
   <div class="container">
     <div class="cta-banner fade-in">
-      <div>
-        <h2 class="section-title" style="margin-bottom:8px;">Ready to source premium Chamotte?</h2>
-        <p style="color:var(--text-muted);">Request a sample, get a quote, or speak to our technical team today.</p>
+      <div class="cta-left">
+        <span class="section-tag" style="margin-bottom:16px;">Get Started</span>
+        <h2 class="section-title" style="margin-bottom:12px;text-align:left;">Ready to Source Premium Chamotte?</h2>
+        <p style="color:var(--text-muted);margin-bottom:32px;">Request a sample, get a quote, or connect with our technical team. We respond within 24 hours.</p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;">
+          <a href="contact.html" class="btn btn-primary">Request a Sample</a>
+          <a href="contact.html" class="btn btn-ghost">Ask for Quote</a>
+        </div>
       </div>
-      <div style="display:flex;gap:16px;flex-wrap:wrap;">
-        <a href="contact.html" class="btn btn-primary">Request a Sample</a>
-        <a href="contact.html" class="btn btn-ghost">Ask for Quote</a>
+      <div class="cta-right">
+        <img src="images/DJI_0116.webp" alt="Shiv Shakti Refractory Plant">
+        <div class="cta-right-overlay"></div>
       </div>
     </div>
   </div>
@@ -429,14 +613,14 @@
 <script>
   // Hamburger
   const ham = document.getElementById('hamburger');
-  const nav = document.getElementById('navLinks');
-  ham.addEventListener('click', () => { ham.classList.toggle('open'); nav.classList.toggle('open'); });
+  const navLinks = document.getElementById('navLinks');
+  ham.addEventListener('click', () => { ham.classList.toggle('open'); navLinks.classList.toggle('open'); });
 
   // Fade-in on scroll
   const els = document.querySelectorAll('.fade-in');
   const obs = new IntersectionObserver((entries) => {
     entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
-  }, { threshold: 0.1 });
+  }, { threshold: 0.08 });
   els.forEach(el => obs.observe(el));
 </script>
   <div class="mobile-cta-wrap">
