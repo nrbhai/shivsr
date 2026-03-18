@@ -32,7 +32,10 @@
 
 /* ---------- Reset ---------- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
 body {
   font-family: 'Inter', sans-serif;
   background: var(--bg-dark);
@@ -688,4 +691,28 @@ footer {
   border-radius: var(--radius);
   margin-bottom: 16px;
   border: 1px solid var(--border);
+}
+
+/* ---------- MOBILE / SMALL SCREEN FIXES ---------- */
+@media (max-width: 900px) {
+  /* Prevent long hero headings from overflowing on smaller devices */
+  .hero h1 {
+    white-space: normal;
+    word-break: break-word;
+  }
+  /* Improve mobile performance and avoid layout issues on iOS */
+  .hero {
+    background-attachment: scroll;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Allow product and intro images to scale naturally on narrow screens */
+  .pc-img {
+    height: auto;
+  }
+  .intro-img {
+    aspect-ratio: auto;
+    height: auto;
+  }
 }
