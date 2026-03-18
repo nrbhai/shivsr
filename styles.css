@@ -428,10 +428,8 @@ thead { background: rgba(245,158,11,0.1); }
 th {
   padding: 14px 18px;
   text-align: left;
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+  font-size: 0.95rem;
+  font-weight: 600;
   color: var(--primary);
   white-space: nowrap;
 }

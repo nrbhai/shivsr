@@ -124,25 +124,20 @@
   ham.addEventListener('click', () => { ham.classList.toggle('open'); nav.classList.toggle('open'); });
 
   const images = [
-    "DJI_0110.webp", "DJI_0111.webp", "DJI_0112.webp", "DJI_0113.webp", "DJI_0114.webp", "DJI_0115.webp", "DJI_0116.webp", "DJI_0117.webp", "DJI_0118.webp", "DJI_0119.webp",
-    "DJI_0128.webp", "DJI_0129.webp", "DJI_0130.webp", "DJI_0131.webp", "DJI_0132.webp", "DSC_0403.webp", "RSL_0396.webp", "RSL_0397.webp", "RSL_0398.webp", "RSL_0407.webp",
-    "RSL_0408.webp", "RSL_0409.webp", "RSL_0410.webp", "RSL_0411.webp", "RSL_0412.webp", "RSL_0413.webp", "RSL_0414.webp", "RSL_0415.webp", "RSL_0416.webp", "RSL_0417.webp",
-    "RSL_0418.webp", "RSL_0419.webp", "RSL_0420.webp", "RSL_0421.webp", "RSL_0422.webp", "RSL_0423.webp", "RSL_0424.webp", "RSL_0425.webp", "RSL_0426.webp", "RSL_0427.webp",
-    "RSL_0428.webp", "RSL_0429.webp", "RSL_0430.webp", "RSL_0431.webp", "RSL_0432.webp", "RSL_0433.webp", "RSL_0434.webp", "RSL_0435.webp", "RSL_0436.webp", "RSL_0437.webp",
-    "RSL_0438.webp", "RSL_0439.webp", "RSL_0440.webp", "RSL_0441.webp", "RSL_0442.webp", "RSL_0443.webp", "RSL_0444.webp", "RSL_0445.webp", "RSL_0446.webp", "RSL_0447.webp",
-    "RSL_0448.webp", "RSL_0449.webp", "RSL_0450.webp", "RSL_0451.webp", "RSL_0452.webp", "RSL_0453.webp", "RSL_0454.webp", "RSL_0456.webp", "RSL_0458.webp", "RSL_0459.webp",
-    "RSL_0460.webp", "RSL_0461.webp", "RSL_0462.webp", "RSL_0464.webp", "RSL_0465.webp", "RSL_0466.webp", "RSL_0467.webp", "RSL_0468.webp", "RSL_0469.webp", "RSL_0471.webp",
-    "RSL_0472.webp", "RSL_0473.webp", "RSL_0474.webp", "RSL_0475.webp", "RSL_0476.webp", "RSL_0477.webp", "RSL_0478.webp", "RSL_0479.webp", "RSL_0480.webp", "RSL_0481.webp",
-    "RSL_0482.webp", "RSL_0483.webp", "RSL_0484.webp", "RSL_0485.webp", "RSL_0486.webp", "RSL_0487.webp", "RSL_0488.webp", "RSL_0489.webp", "RSL_0490.webp", "RSL_0491.webp",
-    "RSL_0492.webp", "RSL_0493.webp", "RSL_0494.webp", "RSL_0495.webp", "RSL_0496.webp", "RSL_0497.webp", "RSL_0498.webp", "RSL_0499.webp", "RSL_0500.webp", "RSL_0501.webp",
-    "RSL_0502.webp", "RSL_0503.webp", "RSL_0504.webp", "RSL_0505.webp", "RSL_0506.webp", "RSL_0507.webp", "RSL_0508.webp", "RSL_0509.webp", "RSL_0510.webp", "RSL_0511.webp",
-    "RSL_0512.webp", "RSL_0513.webp", "RSL_0514.webp", "RSL_0515.webp", "RSL_0516.webp", "RSL_0517.webp", "RSL_0518.webp", "RSL_0519.webp", "RSL_0520.webp", "RSL_0521.webp",
-    "RSL_0522.webp", "RSL_0523.webp", "RSL_0524.webp", "RSL_0525.webp", "RSL_0526.webp", "RSL_0527.webp", "RSL_0528.webp", "RSL_0529.webp", "RSL_0530.webp", "RSL_0531.webp",
-    "RSL_0532.webp", "RSL_0533.webp", "RSL_0534.webp", "RSL_0535.webp", "RSL_0536.webp", "RSL_0537.webp", "RSL_0538.webp", "RSL_0539.webp", "RSL_0540.webp", "RSL_0541.webp",
-    "RSL_0542.webp", "RSL_0543.webp", "RSL_0544.webp", "RSL_0545.webp", "RSL_0546.webp", "RSL_0547.webp", "RSL_0548.webp", "RSL_0549.webp", "RSL_0550.webp", "RSL_0551.webp",
-    "RSL_0552.webp", "RSL_0553.webp", "RSL_0554.webp", "RSL_0555.webp", "RSL_0556.webp", "RSL_0557.webp", "RSL_0558.webp", "RSL_0559.webp", "RSL_0560.webp", "RSL_0561.webp",
-    "RSL_0562.webp", "RSL_0563.webp", "RSL_0564.webp", "RSL_0565.webp", "RSL_0566.webp", "RSL_0567.webp", "RSL_0568.webp", "RSL_0569.webp", "RSL_0570.webp", "RSL_0571.webp",
-    "RSL_0572.webp", "RSL_0573.webp", "RSL_0574.webp", "RSL_0575.webp"
+    "shivsr1.webp", "shivsr2.webp",
+    "DJI_0111.webp", "DJI_0112.webp", "DJI_0114.webp", "DJI_0116.webp", "DJI_0119.webp",
+    "DJI_0129.webp", "DJI_0130.webp", "DSC_0403.webp",
+    "RSL_0396.webp", "RSL_0407.webp", "RSL_0409.webp", "RSL_0413.webp", "RSL_0416.webp",
+    "RSL_0419.webp", "RSL_0430.webp", "RSL_0432.webp", "RSL_0436.webp", "RSL_0438.webp",
+    "RSL_0440.webp", "RSL_0442.webp", "RSL_0445.webp", "RSL_0449.webp", "RSL_0451.webp",
+    "RSL_0459.webp", "RSL_0465.webp", "RSL_0468.webp", "RSL_0469.webp", "RSL_0471.webp",
+    "RSL_0473.webp", "RSL_0477.webp", "RSL_0479.webp", "RSL_0481.webp", "RSL_0482.webp",
+    "RSL_0484.webp", "RSL_0487.webp", "RSL_0492.webp", "RSL_0498.webp", "RSL_0499.webp",
+    "RSL_0500.webp", "RSL_0502.webp", "RSL_0504.webp", "RSL_0505.webp", "RSL_0509.webp",
+    "RSL_0513.webp", "RSL_0514.webp", "RSL_0516.webp", "RSL_0520.webp", "RSL_0528.webp",
+    "RSL_0532.webp", "RSL_0534.webp", "RSL_0536.webp", "RSL_0539.webp", "RSL_0541.webp",
+    "RSL_0552.webp", "RSL_0554.webp", "RSL_0556.webp", "RSL_0561.webp", "RSL_0566.webp",
+    "RSL_0569.webp", "RSL_0571.webp", "RSL_0573.webp", "RSL_0575.webp"
   ];
 
   const grid = document.getElementById('galleryGrid');
