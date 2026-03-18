@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Manufacturing Gallery | Shiv Shakti Refractory</title>
   <meta name="description" content="View our extensive gallery showcasing the Shiv Shakti Refractory facility, 61m rotary kiln, high-quality Chamotte products, and international export packing.">
+  <meta property="og:title" content="Manufacturing Gallery | Shiv Shakti Refractory">
+  <meta property="og:description" content="View our extensive gallery showcasing the Shiv Shakti Refractory facility, 61m rotary kiln, high-quality Chamotte products, and international export packing.">
+  <meta property="og:url" content="https://www.shivsr.com/gallery.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://www.shivsr.com/images/hero.webp">
+  <meta property="og:site_name" content="Shiv Shakti Refractory">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Manufacturing Gallery | Shiv Shakti Refractory">
+  <meta name="twitter:description" content="View our extensive gallery showcasing the Shiv Shakti Refractory facility, 61m rotary kiln, high-quality Chamotte products, and international export packing.">
+  <meta name="twitter:image" content="https://www.shivsr.com/images/hero.webp">
   <meta name="keywords" content="Shiv Shakti Refractory gallery, refractory manufacturing photos, Chamotte products images, rotary kiln machinery">
   <link rel="canonical" href="https://www.shivsr.com/gallery.html">
   <link rel="stylesheet" href="styles.css">
@@ -58,7 +68,7 @@
 
 <nav class="navbar">
   <div class="container">
-    <a href="index.html" class="nav-brand"><img src="images/logo-transparent.png" alt="Shiv Shakti Refractory" class="nav-logo"></a>
+    <a href="index.html" class="nav-brand"><img loading="lazy" src="images/logo-transparent.png" alt="Shiv Shakti Refractory" class="nav-logo"></a>
     <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
     <div class="nav-links" id="navLinks">
       <a href="index.html">Home</a>
@@ -96,7 +106,7 @@
 
 <div class="lightbox" id="lightbox">
   <span class="lightbox-close" id="lightboxClose">&times;</span>
-  <img src="" alt="" class="lightbox-img" id="lightboxImg">
+  <img src="" alt="Gallery image" class="lightbox-img" id="lightboxImg" loading="lazy">
 </div>
 
 <footer>
@@ -148,7 +158,7 @@
   images.forEach(img => {
     const item = document.createElement('div');
     item.className = 'gallery-item';
-    item.innerHTML = `<img src="images/${img}" alt="Shiv Shakti Refractory Gallery" class="gallery-img">`;
+    item.innerHTML = `<img loading="lazy" src="images/${img}" alt="Shiv Shakti Refractory Gallery" class="gallery-img">`;
     item.onclick = () => {
       lbImg.src = `images/${img}`;
       lb.classList.add('open');
@@ -170,3 +180,4 @@
   </div>
 </body>
 </html>
+
